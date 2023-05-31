@@ -1,0 +1,4 @@
+{
+    "status": 403,
+    "message": "apikey ${btcs} not found, please register first!"
+}
