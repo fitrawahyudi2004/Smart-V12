@@ -11,10 +11,10 @@ await m.reply(wait)
 
  m.reply(`
  
- Pertanyaan Anda : ${text}
+Pertanyaan Anda : ${text}
  
- Jawaban AI : 
- ${js.result}
+Jawaban AI : 
+${js.result}
  
  `)
 }      

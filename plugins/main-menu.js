@@ -69,67 +69,62 @@ let handler = async (m, { conn, command , args ,usedPrefix: _p }) => {
   
 const defaultMenu = {
   before: `
-Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
-
-%dash
-
-%m1 *B O T  I N F O*
-%m2 ⬡ Name : ${nameBot}
-%m2 ⬡ Uptime : %uptime 
-%m2 ⬡ Library : Baileys Multi Device
-%m2 ⬡ Version : %versi
-%m2 ⬡ Prefix Used : *[ %p ]*
-%m2 ⬡ Database : %rtotalreg dari %totalreg 
-%m2 ⬡ Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-%m2 ⬡ OS Platform : ${os.platform()}
-%m2 ⬡ Battery: ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-%m3
-
-%m1 *O W N E R  I N F O*
-%m2 ⬡ Nama : ${owners}
-%m2 ⬡ Nomor : wa.me/%noOwn
-%m2 ⬡ Tanggal Lahir : %lahir
-%m2 ⬡ Instagram : ${sig}
-%m3
-
-%m1 *D E T A I L  P E N G G U N A*
-%m2 ⬡ Nomor Pengguna :  %name 
-%m2 ⬡ Status : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-%m2 ⬡ Premium : %prems
-%m2 ⬡ Role : %role
-%m2 ⬡ Level : %level (%exp / %maxexp) %xp4levelup
-%m2 ⬡ Total XP : %totalexp XP
-%m2 ⬡ Limit : %limit / day
-%m2 ⬡ Exp : %totalexp
-%m2 ⬡ Level : %level
-%m2 ⬡ Role : %role
-%m3
-
-%m1 *T I M E*
-%m2 ⬡ Tanggal : %date
-%m2 ⬡ Tanggal Islam: %dateIslamic
-%m2 ⬡ Hari : %week 
-%m2 ⬡ Weton : %weton
-%m2 ⬡ WIB   : %time
-%m2 ⬡ WITA : ${wita}
-%m2 ⬡ WIT   : ${wit}
-%m3
-
-%m1 *I N F O  L A I N N Y A*
-%m2 ⬡ Ulang Tahun Owner: ${ohari} Hari, ${ojam} Jam, ${onet} Menit, ${detek} Detik
-%m2 ⬡ Ramadhan 2024 : ${ooohari} Hari, ${ooojam} Jam, ${ooonet} Menit, ${oodetek} Detik
-%m2 ⬡ Idul Fitri 2024 : ${oohari} Hari, ${oojam} Jam, ${oonet} Menit, ${odetek} Detik
-%m3
-
-%m1 *I N F O  C M D*
-%m2 ⬡ *Ⓟ* = Premium
-%m2 ⬡ *Ⓛ* = Limit
-%m3
+ ┌–––––––––––––––––✥
+ │「 Hai Kak👋 」
+ └┬❖ 「 ${conn.getName(m.sender)} 」
+ ┌┤❀  Bagaimana Harimu? 😄
+ ┊│❀  Jangan Pernah Menyerah
+ │└────────────┈ ⳹
+ ┊   「 *U S E R  I N F O 克* 」
+ ┊ ◉ *Name :* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+ ┊ ◉ *Tags :* %name 
+ ┊ ◉ *Status :* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+ ┊ ◉ *Premium :* %prems
+ ┊ ◉ *Level :* %level (%exp / %maxexp) %xp4levelup
+ ┊ ◉ *Total Xp :* %totalexp XP
+ ┊ ◉ *Limit :* %limit / day
+ ┊ ◉ *Role :* %role
+ ┗–––––––––––––––––✥
+ ┌–––––––––––––––––✥
+ ┊   「 *B O T  I N F O 克* 」
+ ┊ ◉ *Name :* ${nameBot}
+ ┊ ◉ *Mode :* %mode
+ ┊ ◉ *Uptime :* %uptime 
+ ┊ ◉ *Library :* Baileys Multi Device
+ ┊ ◉ *Version :* %versi
+ ┊ ◉ *Prefix Used :* *[ %p ]*
+ ┊ ◉ *Database :* %rtotalreg dari %totalreg 
+ ┊ ◉ *Memory Used :* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+ ┊ ◉ *OS Platform :* ${os.platform()}
+ ┊ ◉ *Battery:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+ ┗––––––––––––––––––✥
+ ┌–––––––––––––––––✥
+ ┊   「 *T I M E I N F O 克* 」
+ ┊ ◉ *Tanggal :* %date
+ ┊ ◉ *Tanggal Islam:* %dateIslamic
+ ┊ ◉ *Hari :* %week 
+ ┊ ◉ *Weton :* %weton
+ ┊ ◉ *WIB   :* %time
+ ┊ ◉ *WITA :* ${wita}
+ ┊ ◉ *WIT   :* ${wit}
+ ┗––––––––––––––––––✥│
+ ┌––––––––––––––––––✥
+ ┊   「 *I N F O  C M D 克* 」
+ ┊ ◉ *Ⓟ* = Premium
+ ┊ ◉ *Ⓛ* = Limit
+ ┗––––––––––––––––––✥
+ ┌––––––––––––––––––✥
+ ┊ ◉ *ᴇxᴘɪʀᴇᴅ ᴘʀᴇᴍɪᴜᴍ:*
+ ┊${clockStringP(usrs.premiumTime - new Date())} : ''}
+ ┗––––––––––––––––––✥
 `.trimStart(),
   header: '%cc %category %c1',
   body: '%c2 %cmd %islimit %isPremium',
   footer: '%c3',
-  after: `Expired Premium : \n${clockStringP(usrs.premiumTime - new Date())} : ''}\n
+  after: `
+  Expired Premium :
+  ${clockStringP(usrs.premiumTime - new Date())} : ''}
+
   ╭──〔  THANKS TO  〕─⬣
 ⫹⫺ Allah SWT
 ⫹⫺ Orang Tua
@@ -145,7 +140,7 @@ Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
     let { exp, limit, level, role, registered } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = await conn.getName(m.sender)
-    
+    let mode = global.opts['self'] ? 'Private' : 'Publik'
     let d = new Date(new Date + 3600000)
     let lahir = global.lahir
     let names = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)   
@@ -264,7 +259,7 @@ Halo kak, @${m.sender.split`@`[0]} Selamat %ucpn
       totalexp: exp,
       xp4levelup: max - exp,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
-      level, limit, versi, lahir, prems, ucpn, dash, wm3, noOwn, m1, m2, m3, m4, cc, c1, c2, c3, c4, lprem, llim, names, name, weton, week, date, dateIslamic, wib, wit, wita, prems, time, totalreg, rtotalreg, role,
+      level, limit, versi, lahir, mode, prems, ucpn, dash, wm3, noOwn, m1, m2, m3, m4, cc, c1, c2, c3, c4, lprem, llim, names, name, weton, week, date, dateIslamic, wib, wit, wita, prems, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     //await conn.sendFile(m.chat, 'https://s5.ttsmaker.com/file/2023-05-30-002445_130879.mp3', m )

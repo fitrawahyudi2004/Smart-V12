@@ -10,7 +10,7 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 12733,
+      "exp": 14851,
       "coin": 0,
       "atm": 0,
       "limit": 100,
@@ -193,38 +193,15 @@
       "bibitjeruk": 0,
       "premiumDate": -1,
       "akinator": {
-        "sesi": true,
+        "sesi": false,
         "server": "https://srv14.akinator.com:9442/ws",
         "frontaddr": "MTQ3LjEzNS4xMjkuOTM=",
-        "session": 98,
-        "signature": 870157401,
-        "question": "Apakah dia tinggal di negara anda?",
-        "progression": null,
-        "step": null,
-        "soal": {
-          "key": {
-            "remoteJid": "6281262166032@s.whatsapp.net",
-            "fromMe": true,
-            "id": "BAE52F347EAD943F"
-          },
-          "message": {
-            "extendedTextMessage": {
-              "text": "🎮 *Akinator* 🎮\n\n@6281262166032\n\nApakah dia tinggal di negara anda?\n\nBalas Pesan ini dan ketik salah satu angka di bawah ini\n\n0 - Ya\n1 - Tidak\n2 - Saya Tidak Tau\n3 - Mungkin\n4 - Mungkin Tidak\n\n*.akinator end* untuk keluar dari sesi Akinator\n\n",
-              "contextInfo": {
-                "stanzaId": "D58AB841B7EB49843DCD07F224C2E9DA",
-                "participant": "6281262166032@s.whatsapp.net",
-                "quotedMessage": {
-                  "conversation": ".akinator"
-                },
-                "mentionedJid": [
-                  "6281262166032@s.whatsapp.net"
-                ]
-              }
-            }
-          },
-          "messageTimestamp": "1685556781",
-          "status": "PENDING"
-        }
+        "session": 223,
+        "signature": 705996232,
+        "question": "Apakah dia Tinggal di Indonesia?",
+        "progression": 65.0437,
+        "step": 15,
+        "soal": null
       }
     },
     "6282180255595@s.whatsapp.net": {
@@ -237,7 +214,7 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 56,
+      "exp": 95,
       "coin": 0,
       "atm": 0,
       "limit": 100,
@@ -1065,10 +1042,10 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 360,
+      "exp": 403,
       "coin": 0,
       "atm": 0,
-      "limit": 91,
+      "limit": 71,
       "tigame": 999,
       "lastclaim": 0,
       "money": 0,
@@ -2408,15 +2385,29 @@
       "delete": true,
       "antiLink": false,
       "viewonce": false,
+      "antiToxic": true,
+      "reminder": true
+    },
+    "120363162011450253@g.us": {
+      "isBanned": false,
+      "welcome": true,
+      "detect": false,
+      "sWelcome": "",
+      "sBye": "",
+      "sPromote": "",
+      "sDemote": "",
+      "delete": true,
+      "antiLink": false,
+      "viewonce": false,
       "antiToxic": true
     }
   },
   "stats": {
     "main-menu.js": {
-      "total": 77,
-      "success": 71,
-      "last": 1685556837836,
-      "lastSuccess": 1685556837836
+      "total": 89,
+      "success": 83,
+      "last": 1685630161247,
+      "lastSuccess": 1685630161247
     },
     "featurelist.js": {
       "total": 19,
@@ -2431,10 +2422,10 @@
       "lastSuccess": 1685460180311
     },
     "_antililink_del.js": {
-      "total": 11,
-      "success": 11,
-      "last": 1685462764939,
-      "lastSuccess": 1685462764939
+      "total": 16,
+      "success": 16,
+      "last": 1685636663868,
+      "lastSuccess": 1685636663868
     },
     "downloader-igstory.js": {
       "total": 2,
@@ -2575,10 +2566,10 @@
       "lastSuccess": 0
     },
     "game-akinator.js": {
-      "total": 68,
-      "success": 68,
-      "last": 1685556781493,
-      "lastSuccess": 1685556781493
+      "total": 75,
+      "success": 75,
+      "last": 1685623175990,
+      "lastSuccess": 1685623175990
     },
     "creator.js": {
       "total": 6,
@@ -2647,10 +2638,10 @@
       "lastSuccess": 1685276587527
     },
     "group-setnamegroup.js": {
-      "total": 3,
-      "success": 3,
-      "last": 1685281692897,
-      "lastSuccess": 1685281692897
+      "total": 4,
+      "success": 4,
+      "last": 1685634358754,
+      "lastSuccess": 1685634358754
     },
     "goup-setbotpp.js": {
       "total": 2,
@@ -2737,10 +2728,10 @@
       "lastSuccess": 1685364637120
     },
     "bot.js": {
-      "total": 16,
-      "success": 15,
-      "last": 1685460121251,
-      "lastSuccess": 1685460121251
+      "total": 17,
+      "success": 16,
+      "last": 1685636644607,
+      "lastSuccess": 1685636644607
     },
     "alquran2.js": {
       "total": 2,
@@ -2749,10 +2740,10 @@
       "lastSuccess": 1685367129648
     },
     "openai-ai.js": {
-      "total": 13,
-      "success": 13,
-      "last": 1685377790354,
-      "lastSuccess": 1685377790354
+      "total": 14,
+      "success": 14,
+      "last": 1685623391798,
+      "lastSuccess": 1685623391798
     },
     "openai-aiimg.js": {
       "total": 4,
@@ -2761,10 +2752,10 @@
       "lastSuccess": 1685377813236
     },
     "assalamualaikum.js": {
-      "total": 4,
-      "success": 2,
-      "last": 1685379109603,
-      "lastSuccess": 1685379109603
+      "total": 5,
+      "success": 3,
+      "last": 1685638104329,
+      "lastSuccess": 1685638104329
     },
     "sticker-tourl.js": {
       "total": 3,
@@ -2791,10 +2782,10 @@
       "lastSuccess": 1685374612233
     },
     "broadcast.js": {
-      "total": 4,
-      "success": 2,
-      "last": 1685376878288,
-      "lastSuccess": 1685375194515
+      "total": 7,
+      "success": 4,
+      "last": 1685635559545,
+      "lastSuccess": 1685635559545
     },
     "beritahoax.js": {
       "total": 3,
@@ -2803,10 +2794,10 @@
       "lastSuccess": 1685449348826
     },
     "downloader-spotify.js": {
-      "total": 4,
-      "success": 3,
-      "last": 1685451788537,
-      "lastSuccess": 1685451788537
+      "total": 6,
+      "success": 5,
+      "last": 1685632907248,
+      "lastSuccess": 1685632907248
     },
     "downloader-play.js": {
       "total": 2,
@@ -2821,10 +2812,10 @@
       "lastSuccess": 1685453984911
     },
     "_ppcp.js": {
-      "total": 2,
-      "success": 2,
-      "last": 1685454266992,
-      "lastSuccess": 1685454266992
+      "total": 3,
+      "success": 3,
+      "last": 1685623488471,
+      "lastSuccess": 1685623488471
     },
     "downloader-unsplash.js": {
       "total": 3,
@@ -2851,10 +2842,10 @@
       "lastSuccess": 1685457742928
     },
     "downloader-tiktok.js": {
-      "total": 14,
-      "success": 12,
-      "last": 1685462166978,
-      "lastSuccess": 1685462080505
+      "total": 15,
+      "success": 13,
+      "last": 1685625256678,
+      "lastSuccess": 1685625256678
     },
     "enable.js": {
       "total": 3,
@@ -2885,6 +2876,96 @@
       "success": 2,
       "last": 1685464278262,
       "lastSuccess": 1685464278262
+    },
+    "_ppcp2.js": {
+      "total": 5,
+      "success": 1,
+      "last": 1685623724029,
+      "lastSuccess": 1685623724029
+    },
+    "game-tebaklagu.js": {
+      "total": 6,
+      "success": 0,
+      "last": 1685624849513,
+      "lastSuccess": 0
+    },
+    "nulis.js": {
+      "total": 4,
+      "success": 2,
+      "last": 1685625721751,
+      "lastSuccess": 1685625721751
+    },
+    "creategc.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685626308843,
+      "lastSuccess": 1685626308843
+    },
+    "readviewone.js": {
+      "total": 4,
+      "success": 0,
+      "last": 1685631641484,
+      "lastSuccess": 0
+    },
+    "whatmusic.js": {
+      "total": 15,
+      "success": 6,
+      "last": 1685633371407,
+      "lastSuccess": 1685633371407
+    },
+    "tools-spamwa.js": {
+      "total": 3,
+      "success": 1,
+      "last": 1685633618387,
+      "lastSuccess": 1685633618387
+    },
+    "tools-emojimix.js": {
+      "total": 5,
+      "success": 1,
+      "last": 1685634117386,
+      "lastSuccess": 1685633961103
+    },
+    "group-setppgc.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685634292814,
+      "lastSuccess": 1685634292814
+    },
+    "group-setdesc.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685634428624,
+      "lastSuccess": 1685634428624
+    },
+    "group-reiminder.js": {
+      "total": 3,
+      "success": 3,
+      "last": 1685634587436,
+      "lastSuccess": 1685634587436
+    },
+    "get-sider.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685634660800,
+      "lastSuccess": 1685634660800
+    },
+    "owner-join.js": {
+      "total": 4,
+      "success": 0,
+      "last": 1685636654620,
+      "lastSuccess": 0
+    },
+    "tools-checkapikey.js": {
+      "total": 6,
+      "success": 3,
+      "last": 1685637462204,
+      "lastSuccess": 1685637462204
+    },
+    "audiosurah.js": {
+      "total": 5,
+      "success": 1,
+      "last": 1685638613341,
+      "lastSuccess": 1685638613341
     }
   },
   "msgs": {},

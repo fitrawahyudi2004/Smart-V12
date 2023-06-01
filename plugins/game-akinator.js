@@ -43,9 +43,9 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
 
 handler.help = ['akinator']
-handler.tags  = ['game']
+handler.tags  = ['game','premium']
 handler.command = /^(akinator)$/i
-
+handler.premium = true
 handler.limit = true
 
 module.exports = handler

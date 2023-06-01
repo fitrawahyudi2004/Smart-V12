@@ -1,5 +1,6 @@
-import os from 'os'
-export async function all(m) {
+let os = require('os')
+let handler = m => m
+handler.before = async function (m) {
 	let setting = db.data.settings[this.user.jid]
 
 	if (new Date() * 1 - setting.status > 1000) {
