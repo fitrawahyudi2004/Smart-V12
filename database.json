@@ -10,7 +10,7 @@
       "level": 0,
       "pasangan": "",
       "pc": 0,
-      "exp": 14851,
+      "exp": 15149,
       "coin": 0,
       "atm": 0,
       "limit": 100,
@@ -2400,14 +2400,27 @@
       "antiLink": false,
       "viewonce": false,
       "antiToxic": true
+    },
+    "6283879300235@s.whatsapp.net": {
+      "isBanned": false,
+      "welcome": true,
+      "detect": false,
+      "sWelcome": "",
+      "sBye": "",
+      "sPromote": "",
+      "sDemote": "",
+      "delete": true,
+      "antiLink": false,
+      "viewonce": false,
+      "antiToxic": true
     }
   },
   "stats": {
     "main-menu.js": {
-      "total": 89,
-      "success": 83,
-      "last": 1685630161247,
-      "lastSuccess": 1685630161247
+      "total": 90,
+      "success": 84,
+      "last": 1685713727716,
+      "lastSuccess": 1685713727716
     },
     "featurelist.js": {
       "total": 19,
@@ -2728,10 +2741,10 @@
       "lastSuccess": 1685364637120
     },
     "bot.js": {
-      "total": 17,
-      "success": 16,
-      "last": 1685636644607,
-      "lastSuccess": 1685636644607
+      "total": 18,
+      "success": 17,
+      "last": 1685711666500,
+      "lastSuccess": 1685711666500
     },
     "alquran2.js": {
       "total": 2,
@@ -2914,10 +2927,10 @@
       "lastSuccess": 1685633371407
     },
     "tools-spamwa.js": {
-      "total": 3,
-      "success": 1,
-      "last": 1685633618387,
-      "lastSuccess": 1685633618387
+      "total": 5,
+      "success": 2,
+      "last": 1685713858009,
+      "lastSuccess": 1685713858009
     },
     "tools-emojimix.js": {
       "total": 5,
@@ -2966,6 +2979,18 @@
       "success": 1,
       "last": 1685638613341,
       "lastSuccess": 1685638613341
+    },
+    "jadianime.js": {
+      "total": 7,
+      "success": 3,
+      "last": 1685715586430,
+      "lastSuccess": 1685715586430
+    },
+    "tools-blur.js": {
+      "total": 2,
+      "success": 2,
+      "last": 1685715841508,
+      "lastSuccess": 1685715841508
     }
   },
   "msgs": {},
