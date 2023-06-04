@@ -21,6 +21,7 @@ let tags = {
   'random': 'FEATURE RANDOM',
   'islam': 'ISLAMIC FEATURE',
   'fun': 'FEATURE FUN',
+  'lacak': 'LACAK PAKET',
   'github': 'FEATURE GITHUB',
   'group': 'FEATURE GROUP',
   'info': 'FEATURE INFO',

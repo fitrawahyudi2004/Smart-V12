@@ -20,6 +20,7 @@ Opsi Tersedia:
 
 `
 let buffer = await fetch(`https://api.botcahx.live/api/asupan/${teks}?apikey=${btc}`).then(res => res.buffer())
+await m.reply("Sabar kak jangan ngocok dulu")
 conn.sendFile(m.chat, buffer, 'hasil.mp4', "Random " + text, m)
 }
 handler.help = ['asupan']

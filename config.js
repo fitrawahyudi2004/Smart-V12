@@ -12,7 +12,7 @@
 
 global.owner = ['6281262166032']  
 global.mods = ['6281262166032'] 
-global.prems = ['6281262166032']
+global.prems = ['6281262166032','62895393551666']
 global.nameowner = 'Fitra Wahyudi'
 global.nomorown = '6281262166032' 
 global.mail = 'fitrawahyudi739@gmail.com' 

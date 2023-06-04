@@ -1,9 +1,10 @@
 let fetch = require('node-fetch')
+let uploadImage = require('../lib/uploadImage.js')
 let handler = async (m, { conn, command, text, args, usedPrefix }) => {
-    let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''    
+let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''    
 
  if (!teks) throw `
-*Pengunaan :*\n${prefix}${command} Nik|Provinsi|Kabupaten|Nama|TempatTanggalLahir|JenisKel|Alamat|RtRw|KelDesa|Kecamatan|Agama|Statu|Pekerjaan|Region|Berlaku|LinkGambar\n\n${prefix}${command} 35567778995|Provinsi Sumatera Utara|Kabupaten Deli Serdang|Muhib Jamaluddin|Medan|Laki-Laki|Tembung|02/05|Bandar Khalipah|Medan Kota|Islam|Jomblo|anakjebeh|Indonesia|2021-2080|https://i.ibb.co/qrQX5DC/IMG-20220401-WA0084.jpg\n\n\n*[warning]*\nsetiap input query setelah garis tengah | di larang penggunaan spasi\n*「 INFO IMAGE 」*\nUntuk Gambar Profil KTP\nUpload Dari Web Berikut Ini\n\nhttps://i.waifu.pics\nhttps://c.top4top.io\n\nCONTOH HASIL NYA\nhttps://i.ibb.co/qrQX5DC/IMG-20220401-WA0084.jpg\nhttps://k.top4top.io/p_2208264hn0.jpg    
+*Pengunaan :*\n${prefix}${command} Nik|Provinsi|Kabupaten|Nama|TempatTanggalLahir|JenisKel|Alamat|RtRw|KelDesa|Kecamatan|Agama|Statu|Pekerjaan|Region|Berlaku|LinkGambar\n\n${prefix}${command} 35567778995|Provinsi Sumatera Utara|Kabupaten Deli Serdang|Muhib Jamaluddin|Medan|Laki-Laki|Tembung|02/05|Bandar Khalipah|Medan Kota|Islam|Jomblo|anakjebeh|Indonesia|2021-2080\n\n\n*[warning]*\nsetiap input query setelah garis tengah | di larang penggunaan spasi\n\n*「 INFO IMAGE 」*\nUntuk Gambar Profil KTP\nKirim gambar dengan caption perintah yang tadi    
     `
 
 let get_args = args.join(" ").split("|")
@@ -37,13 +38,12 @@ warga = get_args[13]
 if (!warga) return m.reply('region belum ada')
 until = get_args[14]
 if (!until) return m.reply('waktu berlaku belum ada')
-img = get_args[15]
-if (!img) return m.reply('url image belum ada')
 
-
-
-let buffer = await fetch(`https://api.lolhuman.xyz/api/ktpmaker?apikey=${lolkey}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${img}`).then(res => res.buffer())
-conn.sendFile(m.chat, buffer, 'hasil.jpg', "Nih kk KTP nya ", m)
+let q = m.quoted ? m.quoted : m
+let media = await q.download()
+let url = await uploadImage(media)
+let hasil = await (await fetch(`https://api.lolhuman.xyz/api/ktpmaker?apikey=${lolkey}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${url}`)).buffer()
+conn.sendFile(m.chat, hasil, 'hasil.jpg', "Nih kk KTP nya\n\n"+ wm, m)
 }
 handler.help = ['ktpmaker']
 handler.command = ['ktpmaker']
