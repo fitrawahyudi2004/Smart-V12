@@ -18,9 +18,9 @@ ${json.arab}
 *Artinya :* ${json.translation}
 *Audio :* Syekh Mishari Rashid Al Fasy
 
-*Tafsir Kemenag:* ${json.tafsir.kemenag.long}
+*Tafsir Kemenag :* ${json.tafsir.kemenag.long}
 
-*Tafsir Quraish Syihab:* ${json.tafsir.quraish}
+*Tafsir Quraish Syihab :* ${json.tafsir.quraish}
 
 *Tafsir Jalalayn :* ${json.tafsir.jalalayn}
 `.trim())

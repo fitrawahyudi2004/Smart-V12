@@ -1,9 +1,10 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, command, args,usedPrefix,text }) => {
+
 if (!text) throw `
 Masukkan No surah
 
-Contoh : ${usedPrefix + command} 114
+Contoh : ${usedPrefix + command} 114 114
 
 List Surah :
 
@@ -89,7 +90,7 @@ List Surah :
         80: 'Abasa,
         81: At-Takwir,
         82: Al-Infitar,
-        83: Al-Tatfif,
+        83: Al-Mutaffifin,
         84: Al-Insyiqaq,
         85: Al-Buruj,
         86: At-Tariq,
@@ -123,11 +124,22 @@ List Surah :
         114: An-Nas
 
 `
-let buffer = await fetch(`https://api.lolhuman.xyz/api/quran/audio/${text}?apikey=${lolkey}`).then(res => res.buffer())
 
-let flas = `https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=Audio Surah`
-conn.sendFile(m.chat, flas, "Nih.jpg", `Surah Ke *${text}* dalam alquran`, m)
-conn.sendFile(m.chat, buffer, "audio.mp3", m)
+
+let res = await (await fetch(`https://raw.githubusercontent.com/penggguna/QuranJSON/master/surah/${text}.json`)).json()
+
+let anu = (`
+*Surah ${res.name}*
+*Surah ke ${res.number_of_surah}*
+*Termasuk surah ${res.type}*
+*Audio ${res.recitations[1].name}*
+
+${wm}
+        `.trim())
+let flas = `https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=${res.name}`
+conn.sendFile(m.chat, flas, "nih.jpg", anu, m)
+//let buffer = await fetch(`https://api.lolhuman.xyz/api/quran/audio/${text}?apikey=${lolkey}`).then(res => res.buffer())
+conn.sendFile(m.chat, res.recitations[1].audio_url, "audio.mp3", m)
 }
 handler.help = ['audiosurah <no surah>']
 handler.tags = ['islam']

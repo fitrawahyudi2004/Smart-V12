@@ -1,15 +1,20 @@
-// let instagramGetUrl = require('instagram-url-direct')
-// let handler = async (m, { conn, args, usedPrefix, command }) => {
-//     if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.instagram.com/p/ByxKbUSnubS/?utm_source=ig_web_copy_link`
-//     const results = (await instagramGetUrl(args[0])).url_list[0]
 
-//     conn.sendFile(m.chat, results, 'ig.mp4', `*Instagram Downloader*`, m)
-// }
-// handler.help = ['igdl'].map(v => v + ' <url>')
+// let fetch = require ('node-fetch')
+// let handler = async (m, { conn, command, text, args, usedPrefix }) => {
+// // if (!text) throw `
+// // Contoh : ${usedPrefix + command} https://www.instagram.com/reel/CtJdj8CgPIC/
+// // `
+// // await m.reply("Tunggu sebentar sedang melacak paket anda...")
+// let buffer = await  fetch(`https://api.botcahx.live/api/dowloader/igdowloader?url=https://www.instagram.com/reel/CtJiHOdhZPl/?igshid=NTc4MTIwNjQ2YQ==&apikey=fitra_wahyudi_`).then(res => res.buffer())
+
+// conn.sendFile(m.chat, buffer, "Hasil.jpg", wm, m)
+//     }
+
+// handler.help = ['igdl <link>']
+// handler.command = /^(ig(dl)?)$/i
 // handler.tags = ['downloader']
 // handler.register = true
-// handler.premium = true
-// handler.command = /^(igdl)$/i
 // handler.limit = true
-
+// handler.premium = false
 // module.exports = handler
+

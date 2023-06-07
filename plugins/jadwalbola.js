@@ -7,7 +7,7 @@ m.reply(` *JADWAL BOLA*
 
 _*${json.result[0].event}*_
 Waktu: _${json.result[0].time}_
-Match: _${json.result[0]}_
+Match: _${json.result[0].match}_
 Channel tv: ${json.result[0].tv}
 
 _*${json.result[1].event}*_
