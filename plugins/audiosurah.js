@@ -129,6 +129,8 @@ List Surah :
 let res = await (await fetch(`https://raw.githubusercontent.com/penggguna/QuranJSON/master/surah/${text}.json`)).json()
 
 let anu = (`
+─────〔 *Audio Surah* 〕─────
+
 *Surah ${res.name}*
 *Surah ke ${res.number_of_surah}*
 *Termasuk surah ${res.type}*

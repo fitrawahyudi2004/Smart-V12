@@ -1,12 +1,12 @@
 let handler = async (m, { conn }) => {
     conn.tekateki = conn.tekateki ? conn.tekateki : {}
     let id = m.chat
-    if (!(id in conn.tekateki)) throw 0
+    if (!(id in conn.tekateki)) throw false
     let json = conn.tekateki[id][1]
-    conn.reply(m.chat, '```' + json.bantuan + '```\nBalas soalnya, bukan pesan ini!', conn.tekateki[id][0])
+    let nya = json.jawaban
+    let nyanya = nya.replace(/[bcdfghjklmnpqrstvwxyz]/g, '_')
+    m.reply('```' + nyanya + '```')
 }
-handler.command = /^tete$/i
-
-handler.limit = 1
-
+handler.command = /^teka$/i
+handler.limit = true
 module.exports = handler

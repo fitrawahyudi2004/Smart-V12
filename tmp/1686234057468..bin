@@ -1,0 +1,5 @@
+{
+    "status": 400,
+    "message": "author parameter cannot be empty",
+    "result": "error"
+}
